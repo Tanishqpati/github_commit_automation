@@ -11,6 +11,14 @@ def git_add_commit_push(date, commit_message):
     subprocess.run(['git', 'commit', '--date=' + date, '-m', commit_message])
     subprocess.run(['git', 'push'])
 
+def generate_dates(start_date, end_date):
+    dates = []
+    current_date = start_date
+    while current_date <= end_date:
+        dates.append(current_date.strftime("%Y-%m-%d %H:%M:%S"))
+        current_date += timedelta(days=1)
+    return dates
+
 def main():
     # Clone the GitHub repository to a local folder
     repo_url = 'https://github.com/yourusername/yourrepository.git'
