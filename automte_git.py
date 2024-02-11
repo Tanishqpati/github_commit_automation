@@ -10,7 +10,11 @@ def git_add_commit(date, commit_message):
     subprocess.run(['git', 'commit', '--date=' + date, '-m', commit_message])
 
 def main():
-    
+    # Clone the GitHub repository to a local folder
+    repo_url = 'https://github.com/yourusername/yourrepository.git'
+    local_folder = 'local_repo'
+    subprocess.run(['git', 'clone', repo_url, local_folder])
 
+    
 if __name__ == "__main__":
     main()
