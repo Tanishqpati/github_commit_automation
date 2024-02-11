@@ -22,6 +22,8 @@ def main():
         # Add more dates as needed
     ]
 
-    
+    # Text to add to the file
+    text_to_add = "Your text goes here\n"
+
 if __name__ == "__main__":
     main()
