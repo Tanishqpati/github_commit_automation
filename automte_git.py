@@ -28,6 +28,10 @@ def main():
     # File to modify
     file_path = os.path.join(local_folder, 'path', 'to', 'your', 'file.txt')
 
+    # Iterate over dates, modify file, add, and commit
+    for date in commit_dates:
+        modify_file(file_path, text_to_add)
+        git_add_commit(date, "New Changes")
 
 if __name__ == "__main__":
     main()
