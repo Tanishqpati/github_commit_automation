@@ -25,5 +25,9 @@ def main():
     # Text to add to the file
     text_to_add = "Your text goes here\n"
 
+    # File to modify
+    file_path = os.path.join(local_folder, 'path', 'to', 'your', 'file.txt')
+
+
 if __name__ == "__main__":
     main()
