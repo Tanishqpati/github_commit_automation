@@ -28,12 +28,12 @@ def main():
     # Change directory to the cloned repository
     os.chdir(local_folder)
 
-    # Dates to commit changes
-    commit_dates = [
-        "2023-01-01 15:35:08",
-        "2023-01-02 10:20:00",
-        # Add more dates as needed
-    ]
+    # Specify the start and end dates for commits
+    start_date = datetime(2023, 1, 1)
+    end_date = datetime(2023, 12, 31)
+
+    # Generate commit dates for the whole year
+    commit_dates = generate_dates(start_date, end_date)
 
     # Text to add to the file
     text_to_add = "Your text goes here\n"
