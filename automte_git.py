@@ -5,9 +5,10 @@ def modify_file(file_path, text_to_add):
     with open(file_path, 'a') as file:
         file.write(text_to_add)
 
-def git_add_commit(date, commit_message):
+def git_add_commit_push(date, commit_message):
     subprocess.run(['git', 'add', '.'])
     subprocess.run(['git', 'commit', '--date=' + date, '-m', commit_message])
+    subprocess.run(['git', 'push'])
 
 def main():
     # Clone the GitHub repository to a local folder
@@ -34,7 +35,7 @@ def main():
     # Iterate over dates, modify file, add, and commit
     for date in commit_dates:
         modify_file(file_path, text_to_add)
-        git_add_commit(date, "New Changes")
+        git_add_commit_push(date, "New Changes")
 
 if __name__ == "__main__":
     main()
