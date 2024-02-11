@@ -15,6 +15,9 @@ def main():
     local_folder = 'local_repo'
     subprocess.run(['git', 'clone', repo_url, local_folder])
 
+    # Change directory to the cloned repository
+    os.chdir(local_folder)
+
     # Dates to commit changes
     commit_dates = [
         "2023-01-01 15:35:08",
